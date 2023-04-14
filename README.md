@@ -132,6 +132,13 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 |1|{1,2,3}|
 |2|{1,2,3}|
 |3|{}|
+
+初始状态A = firstpos(root) = {1,2,3}  
+- A被加上标记，对于输入符号a,b,有:  
+  - A = Dtrans\[A,a\] = {1,2,3}
+  - A = Dtrans\[A,b\] = {1,2,3}
+![image](https://user-images.githubusercontent.com/49871906/231993325-ed3d2bf2-637e-4121-bb19-2e9fe0454041.png)
+
 ### (a*|b*)*
 ![image](https://user-images.githubusercontent.com/49871906/231948720-4d495e30-8f27-4022-b037-50fa85eccd42.png)
 |节点|followpos|
@@ -139,6 +146,13 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 |1|{1,2,3}|
 |2|{1,2,3}|
 |3|{}|
+
+初始状态A = firstpos(root) = {1,2,3}  
+- A被加上标记，对于输入符号a,b,有:  
+  - A = Dtrans\[A,a\] = {1,2,3}
+  - A = Dtrans\[A,b\] = {1,2,3}
+![image](https://user-images.githubusercontent.com/49871906/231993343-332d5def-22b3-4baa-b22e-913386c034f7.png)
+
 ### ((ϵ |a)b*)*
 ![image](https://user-images.githubusercontent.com/49871906/231952501-81448778-5b8b-4283-96ca-207d9ea527a6.png)
 |节点|followpos|
@@ -146,6 +160,13 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 |1|{1,2,3}|
 |2|{1,2,3}|
 |3|{}|
+
+初始状态A = firstpos(root) = {1,2,3}  
+- A被加上标记，对于输入符号a,b,有:  
+  - A = Dtrans\[A,a\] = {1,2,3}
+  - A = Dtrans\[A,b\] = {1,2,3}
+![image](https://user-images.githubusercontent.com/49871906/231993304-c237c965-c3ed-4cdd-b673-44fb8c129c00.png)
+
 ### (a|b)\*abb(a|b)\*
 ![image](https://user-images.githubusercontent.com/49871906/231952520-0d5ecb83-eac5-4482-9165-c22c2e3b6237.png)
 |节点|followpos|
@@ -158,3 +179,24 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 |6|{6,7,8}|
 |7|{6,7,8}|
 |8|{}|
+
+初始状态A = firstpos(root) = {1,2,3}  
+- A被加上标记，对于输入符号a,b,有:  
+  - B = Dtrans\[A,a\] = {1,2,3,4}
+  - A = Dtrans\[A,b\] = {1,2,3}
+- B被加上标记，对于输入符号a,b,有:  
+  - B = Dtrans\[B,a\] = {1,2,3,4}
+  - C = Dtrans\[B,b\] = {1,2,3,5}
+- C被加上标记，对于输入符号a,b,有:  
+  - B = Dtrans\[C,a\] = {1,2,3,4}
+  - D = Dtrans\[C,b\] = {1,2,3,6,7,8}
+- D被加上标记，对于输入符号a,b,有:  
+  - E = Dtrans\[D,a\] = {1,2,3,4,6,7,8}
+  - D = Dtrans\[D,b\] = {1,2,3,6,7,8}
+- E被加上标记，对于输入符号a,b,有:  
+  - E = Dtrans\[E,a\] = {1,2,3,4,6,7,8}
+  - F = Dtrans\[E,b\] = {1,2,3,5,6,7,8}
+- F被加上标记，对于输入符号a,b,有:  
+  - E = Dtrans\[F,a\] = {1,2,3,4,6,7,8}
+  - D = Dtrans\[F,b\] = {1,2,3,6,7,8}
+![image](https://user-images.githubusercontent.com/49871906/231993407-4ff6f63c-8a5c-4082-96a8-b377803de4d1.png)
