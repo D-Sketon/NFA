@@ -127,9 +127,34 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 ## 直接构造法构造这四个正则表达式的DFA，并且最小化DFA
 ### (a|b)*
 ![image](https://user-images.githubusercontent.com/49871906/231948699-15a0e8b9-cc4f-48d1-be5b-f26f6a65e07f.png)
-
+|节点|followpos|
+|-|-|
+|1|{1,2,3}|
+|2|{1,2,3}|
+|3|{}|
 ### (a*|b*)*
 ![image](https://user-images.githubusercontent.com/49871906/231948720-4d495e30-8f27-4022-b037-50fa85eccd42.png)
-
+|节点|followpos|
+|-|-|
+|1|{1,2,3}|
+|2|{1,2,3}|
+|3|{}|
 ### ((ϵ |a)b*)*
+![image](https://user-images.githubusercontent.com/49871906/231952501-81448778-5b8b-4283-96ca-207d9ea527a6.png)
+|节点|followpos|
+|-|-|
+|1||
+|2||
+|3||
 ### (a|b)\*abb(a|b)\*
+![image](https://user-images.githubusercontent.com/49871906/231952520-0d5ecb83-eac5-4482-9165-c22c2e3b6237.png)
+|节点|followpos|
+|-|-|
+|1||
+|2||
+|3||
+|4||
+|5||
+|6||
+|7||
+|8||
