@@ -122,3 +122,13 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 ![image](https://user-images.githubusercontent.com/49871906/229772199-361dbeed-1e6b-483d-b3ee-337b6e976d85.png)
 
 状态转移：0-1-3-1-3-4-5-7
+
+# DFA
+## 直接构造法构造这四个正则表达式的DFA，并且最小化DFA
+### (a|b)*
+![image](https://user-images.githubusercontent.com/49871906/231948124-02c08c64-510f-46df-bf3a-223d6de0cf98.png)
+
+### (a*|b*)*
+
+### ((ϵ |a)b*)*
+### (a|b)\*abb(a|b)\*
