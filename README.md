@@ -213,4 +213,4 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 - {0,1} {2} {3,4,5} =>
 - {0} {1} {2} {3,4,5}
 
-![image](https://user-images.githubusercontent.com/49871906/232006490-5eef025a-e33b-4c12-a1b1-77fcbd4d8185.png)
+![image](https://user-images.githubusercontent.com/49871906/232007311-0c4fe065-8007-4e29-bab2-fc5b849ff6f9.png)
