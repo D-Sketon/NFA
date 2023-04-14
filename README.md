@@ -137,8 +137,10 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 - A被加上标记，对于输入符号a,b,有:  
   - A = Dtrans\[A,a\] = {1,2,3}
   - A = Dtrans\[A,b\] = {1,2,3}
+ 
 ![image](https://user-images.githubusercontent.com/49871906/231993325-ed3d2bf2-637e-4121-bb19-2e9fe0454041.png)
 
+只有一个状态，已经是最小化
 ### (a*|b*)*
 ![image](https://user-images.githubusercontent.com/49871906/231948720-4d495e30-8f27-4022-b037-50fa85eccd42.png)
 |节点|followpos|
@@ -151,8 +153,10 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 - A被加上标记，对于输入符号a,b,有:  
   - A = Dtrans\[A,a\] = {1,2,3}
   - A = Dtrans\[A,b\] = {1,2,3}
+ 
 ![image](https://user-images.githubusercontent.com/49871906/231993343-332d5def-22b3-4baa-b22e-913386c034f7.png)
 
+只有一个状态，已经是最小化
 ### ((ϵ |a)b*)*
 ![image](https://user-images.githubusercontent.com/49871906/231952501-81448778-5b8b-4283-96ca-207d9ea527a6.png)
 |节点|followpos|
@@ -165,8 +169,10 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 - A被加上标记，对于输入符号a,b,有:  
   - A = Dtrans\[A,a\] = {1,2,3}
   - A = Dtrans\[A,b\] = {1,2,3}
+ 
 ![image](https://user-images.githubusercontent.com/49871906/231993304-c237c965-c3ed-4cdd-b673-44fb8c129c00.png)
 
+只有一个状态，已经是最小化
 ### (a|b)\*abb(a|b)\*
 ![image](https://user-images.githubusercontent.com/49871906/231952520-0d5ecb83-eac5-4482-9165-c22c2e3b6237.png)
 |节点|followpos|
@@ -199,4 +205,12 @@ NFA初始状态为状态0，A={0, 1, 2, 4, 7}
 - F被加上标记，对于输入符号a,b,有:  
   - E = Dtrans\[F,a\] = {1,2,3,4,6,7,8}
   - D = Dtrans\[F,b\] = {1,2,3,6,7,8}
-![image](https://user-images.githubusercontent.com/49871906/231993407-4ff6f63c-8a5c-4082-96a8-b377803de4d1.png)
+
+![image](https://user-images.githubusercontent.com/49871906/231998839-c67f3ea3-4dac-4453-a3e0-7105ce249e05.png)
+
+最小化：  
+- {0,1,2} {3,4,5} =>
+- {0,1} {2} {3,4,5} =>
+- {0} {1} {2} {3,4,5}
+
+![image](https://user-images.githubusercontent.com/49871906/232006490-5eef025a-e33b-4c12-a1b1-77fcbd4d8185.png)
